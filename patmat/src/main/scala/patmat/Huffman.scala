@@ -86,7 +86,7 @@ object Huffman {
       else counts.head match {
         case (ch, cnt) => {
           if (ch == char) (char, cnt+1) :: counts.tail
-          else counts.head :: incrCount(char, counts)
+          else counts.head :: incrCount(char, counts.tail)
         }
       }
     }
